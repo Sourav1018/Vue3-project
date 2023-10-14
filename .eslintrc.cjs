@@ -6,12 +6,15 @@ module.exports = {
   extends: [
     "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    // '@vue/eslint-config-prettier',
-    "plugin:prettier/recommended",
-    "plugin:tailwindcss/recommended"
+    "@vue/eslint-config-prettier",
+    "tailwindcss",
+    "plugin:vitest-globals/recommended",
+    "prettier",
   ],
   parserOptions: {
-    ecmaVersion: "latest"
+    ecmaVersion: "latest",
   },
-  Plugins: ["tailwindcss", "prettier"]
+  Plugins: ["tailwindcss", "prettier"],
+  // rules: { "vue/require-default-prop": "off" },
+  evn: { "vitest-globals/evn": true },
 };
